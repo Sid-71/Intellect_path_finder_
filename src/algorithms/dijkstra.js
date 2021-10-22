@@ -28,7 +28,6 @@ function updateUnvisitedNeighbors(node, grid) {
     neighbor.previousNode = node;
   }
 }
-
 function getUnvisitedNeighbors(node, grid) {
   const neighbors = [];
   const {col, row} = node;
@@ -38,7 +37,6 @@ function getUnvisitedNeighbors(node, grid) {
   if (col < grid[0].length - 1) neighbors.push(grid[row][col + 1]);
   return neighbors.filter(neighbor => !neighbor.isVisited);
 }
-
 function getAllNodes(grid) {
   const nodes = [];
   for (const row of grid) {
@@ -48,7 +46,6 @@ function getAllNodes(grid) {
   }
   return nodes;
 }
-
 // Backtracks from the finishNode to find the shortest path.
 // Only works when called *after* the dijkstra method above.
 export function getNodesInShortestPathOrder(finishNode) {
