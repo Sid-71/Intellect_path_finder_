@@ -48,11 +48,12 @@ export default class PathfindingVisualizer extends Component {
       }
       setTimeout(() => {
         const node = visitedNodesInOrder[i];
-        document.getElementById(`node-${node.row}-${node.col}`).className ='node node-visited';
+        document.getElementById(`node-${node.row}-${node.col}`).className =
+          'node node-visited';
       }, 10 * i);
     }
   }
- 
+
   animateShortestPath(nodesInShortestPathOrder) {
     for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
       setTimeout(() => {
@@ -77,9 +78,11 @@ export default class PathfindingVisualizer extends Component {
 
     return (
       <>
-        <button onClick={() => this.visualizeDijkstra()} class="custom-btn btn-12" >
+        
+     <button onClick={() => this.visualizeDijkstra()} class="custom-btn btn-12" >
         <span>Game On!!!</span><span>Intellect Visualizer</span>
         </button>
+
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
